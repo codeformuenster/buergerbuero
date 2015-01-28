@@ -1,4 +1,4 @@
-require 'wombat'
+require 'mechanize'
 require 'scraperwiki'
 
 class BuergerbueroScraper
