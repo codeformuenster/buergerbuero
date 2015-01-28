@@ -4,8 +4,8 @@ require 'scraperwiki'
 class BuergerbueroScraper
 
   def initialize
-    base_url = "http://web.archive.org"
-    path = "/web/20131226080706/http://www.muenster.de/stadt/buergeramt/mobil-wartezeit.shtml"
+    base_url = "http://www.muenster.de"
+    path = "/stadt/buergeramt/mobil-wartezeit.shtml"
     @url = base_url + path
   end
 
