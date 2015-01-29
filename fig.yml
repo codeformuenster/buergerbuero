@@ -1,0 +1,4 @@
+app:
+  build: .
+  ports:
+    - 3338:80
