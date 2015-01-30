@@ -2,14 +2,12 @@ app:
   build: .
   command: puma
   ports:
-    - "9292:9292"
+    - "80:9292"
   volumes:
-    - ./srv:/srv
-
+    - /srv
 
 cron:
   build: .
-#  volumes
-  command: go-cron "*/10 * * * *" /bin/sh -c "rake scraper:scrape"
+  command: go-cron "*/10 * * * *" /bin/sh -c "ruby -r './scraper.rb' -e 'BuergerBuero::Scraper.new.save'"
   volumes_from:
     - app

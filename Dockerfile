@@ -17,6 +17,6 @@ COPY . /usr/src/app
 RUN touch /srv/scraperwiki.sqlite \
   && ln -s /srv/scraperwiki.sqlite
 
+ENV RACK_ENV production
 EXPOSE 80
-#CMD ["foreman", "start", "-e", "production.env"]
-CMD RACK_ENV=production bundle exec puma
+VOLUME /srv
