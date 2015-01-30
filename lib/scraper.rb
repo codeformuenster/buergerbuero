@@ -12,8 +12,11 @@ module BuergerBuero
   class Crawler
     include Wombat::Crawler
 
-    base_url "http://www.muenster.de"
-    path "/stadt/buergeramt/mobil-wartezeit.shtml"
+    # base_url "http://www.muenster.de"
+    # path "/stadt/buergeramt/mobil-wartezeit.shtml"
+
+    base_url "http://web.archive.org"
+    path "/web/20131226080706/http://www.muenster.de/stadt/buergeramt/mobil-wartezeit.shtml"
 
     wartezeit 'xpath=//*[@id="seite"]/div[2]/p[2]/strong'
     warteende 'xpath=//*[@id="seite"]/div[2]/p[1]/strong'

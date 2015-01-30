@@ -1,4 +1,10 @@
 app:
   build: .
+  command: puma
   ports:
     - 3338:80
+
+cron:
+  build: .
+#  volumes
+  command: go-cron "*/10 * * * *" /bin/sh -c "rake scraper:scrape"
