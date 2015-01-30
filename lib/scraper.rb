@@ -1,6 +1,6 @@
 require 'wombat'
 require 'data_mapper'
-require './lib/wartende'
+require './lib/waiting_citizen'
 
 module BuergerBuero
   class Scraper
@@ -13,7 +13,7 @@ module BuergerBuero
     def save
       data = Crawler.new.crawl
       if data["aktualisiert"]
-        wartende = ::Wartende.first_or_create({aktualisiert: data["aktualisiert"]}, data )
+        wartende = ::WaitingCitizen.first_or_create({aktualisiert: data["aktualisiert"]}, data )
         p wartende.inspect
       end
     end

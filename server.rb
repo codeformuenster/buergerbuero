@@ -2,7 +2,7 @@ require 'sinatra/base'
 require "sinatra"
 require 'sinatra/cross_origin'
 require 'data_mapper'
-require './lib/wartende'
+require './lib/waiting_citizen'
 
 module Buergerbuero
   class App < Sinatra::Base
@@ -23,11 +23,11 @@ module Buergerbuero
 
     helpers do
       def latest
-        Wartende.all(order: [ :aktualisiert.desc ], limit: 1).first
+        WaitingCitizen.all(order: [ :aktualisiert.desc ], limit: 1).first
       end
 
       def all
-        Wartende.all(order: [ :aktualisiert.desc ])
+        WaitingCitizen.all(order: [ :aktualisiert.desc ])
       end
     end
   end

@@ -1,5 +1,5 @@
 require 'data_mapper'
-class Wartende
+class WaitingCitizen
   include DataMapper::Resource
 
   property :id, Serial
