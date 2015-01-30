@@ -12,8 +12,10 @@ module BuergerBuero
 
     def save
       data = Crawler.new.crawl
-      wartende = ::Wartende.first_or_create({aktualisiert: data["aktualisiert"]}, data )
-      p wartende.inspect
+      if data["aktualisiert"]
+        wartende = ::Wartende.first_or_create({aktualisiert: data["aktualisiert"]}, data )
+        p wartende.inspect
+      end
     end
 
   end
