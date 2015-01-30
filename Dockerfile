@@ -6,4 +6,4 @@ RUN apt-get update && apt-get install curl \
   && chmod u+x /usr/local/bin/go-cron
 
 EXPOSE 80
-CMD ["foreman", "start", "-e", "production.env"]
+CMD ["puma", "-p 80"]
