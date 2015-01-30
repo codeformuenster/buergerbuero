@@ -2,7 +2,8 @@ source "https://rubygems.org"
 
 gem 'rake'
 gem 'wombat'
-gem 'scraperwiki'
+gem 'dm-sqlite-adapter'
+gem 'data_mapper'
 gem 'whenever'
 gem 'foreman'
 gem 'puma'
