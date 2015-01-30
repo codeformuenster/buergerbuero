@@ -14,6 +14,9 @@ COPY Gemfile.lock /usr/src/app/
 RUN bundle install
 COPY . /usr/src/app
 
+RUN touch /srv/scraperwiki.sqlite \
+  && ln -s /srv/scraperwiki.sqlite
+
 EXPOSE 80
 #CMD ["foreman", "start", "-e", "production.env"]
 CMD RACK_ENV=production bundle exec puma
