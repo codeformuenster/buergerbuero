@@ -6,7 +6,7 @@ module BuergerBuero
   class Scraper
 
     def initialize
-      DataMapper::setup(:default, "sqlite3:///data/buerberbuero.db")
+      DataMapper::setup(:default, "sqlite3:///srv/buerberbuero.db")
       DataMapper.auto_upgrade!
     end
 

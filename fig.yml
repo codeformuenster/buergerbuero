@@ -4,7 +4,7 @@ api:
   ports:
     - 3338:80
   volumes:
-    - ./data:/data
+    - /srv
 cron:
   build: .
   command: "go-cron '@every 5m' /bin/sh -c 'bundle exec rake scraper:scrape --silent'"

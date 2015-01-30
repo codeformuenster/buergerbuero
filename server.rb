@@ -10,7 +10,8 @@ module Buergerbuero
       content_type :json
     end
 
-    DataMapper::setup(:default, "sqlite3:///data/buerberbuero.db")
+    DataMapper::setup(:default, "sqlite3:///srv/buerberbuero.db")
+    DataMapper.auto_upgrade!
 
     get "/latest" do
       latest.to_json
