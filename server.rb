@@ -1,14 +1,16 @@
 require 'sinatra/base'
 require "sinatra"
 require 'sinatra/cross_origin'
-require 'scraperwiki'
-
+require 'data_mapper'
+require './lib/wartende'
 
 module Buergerbuero
   class App < Sinatra::Base
     before do
       content_type :json
     end
+
+    DataMapper::setup(:default, "sqlite3:///data/buerberbuero.db")
 
     get "/latest" do
       latest.to_json
@@ -20,11 +22,11 @@ module Buergerbuero
 
     helpers do
       def latest
-        ScraperWiki::select('wartezeit, warteende, naechste_nummer, aktualisiert from swdata where aktualisiert <> "" order by aktualisiert desc limit 1').first
+        Wartende.all(order: [ :aktualisiert.desc ], limit: 1).first
       end
 
       def all
-        ScraperWiki::select('wartezeit, warteende, naechste_nummer, aktualisiert from swdata where aktualisiert <> "" order by aktualisiert')
+        Wartende.all(order: [ :aktualisiert.desc ])
       end
     end
   end

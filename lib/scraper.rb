@@ -1,11 +1,19 @@
 require 'wombat'
-require 'scraperwiki'
+require 'data_mapper'
+require './lib/wartende'
 
 module BuergerBuero
   class Scraper
 
+    def initialize
+      DataMapper::setup(:default, "sqlite3:///data/buerberbuero.db")
+      DataMapper.auto_upgrade!
+    end
+
     def save
-      ScraperWiki.save_sqlite(["naechste_nummer"], Crawler.new.crawl)
+      data = Crawler.new.crawl
+      wartende = ::Wartende.first_or_create({aktualisiert: data["aktualisiert"]}, data )
+      p wartende.inspect
     end
 
   end
@@ -19,7 +27,7 @@ module BuergerBuero
     warteende 'xpath=//*[@id="seite"]/div[2]/p[1]/strong'
     naechste_nummer 'xpath=//*[@id="seite"]/div[2]/p[3]/strong'
     aktualisiert 'xpath=//*[@id="seite"]/div[2]/p[4]' do |text|
-      DateTime.parse(text.gsub("Letzte Aktualisierung:\n",""))
+      DateTime.parse(text.gsub("Letzte Aktualisierung:\n","")) if text
     end
   end
 end
