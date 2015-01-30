@@ -1,4 +1,12 @@
-app:
+api:
   build: .
   ports:
     - 3338:80
+  volumes:
+    - ./data:/data
+cron:
+  build: .
+  command: "go-cron '0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58 * * * * *' /bin/sh -c 'bundle exec rake scraper:scrape --silent'"
+  volumes_from:
+    - api
+
