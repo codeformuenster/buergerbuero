@@ -10,3 +10,5 @@ gem 'puma'
 
 gem 'sinatra', require: false
 gem 'sinatra-cross_origin', '~> 0.3.2'
+
+gem 'chronic_duration'
