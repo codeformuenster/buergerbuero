@@ -1,0 +1,13 @@
+api:
+  build: .
+  command: puma -p 80
+  ports:
+    - 3338:80
+  volumes:
+    - /srv
+cron:
+  build: .
+  command: "go-cron '@every 5m' /bin/sh -c 'bundle exec rake scraper:scrape --silent'"
+  volumes_from:
+    - api
+

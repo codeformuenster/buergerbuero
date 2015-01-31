@@ -1,5 +1,12 @@
 source "https://rubygems.org"
 
-gem 'morph-cli'
+gem 'rake'
 gem 'wombat'
-gem 'scraperwiki'
+gem 'dm-sqlite-adapter'
+gem 'data_mapper'
+gem 'whenever'
+gem 'foreman'
+gem 'puma'
+
+gem 'sinatra', require: false
+gem 'sinatra-cross_origin', '~> 0.3.2'
