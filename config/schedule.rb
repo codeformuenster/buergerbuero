@@ -1,3 +1,3 @@
-every 10.minutes do
+every 2.minutes do
   rake "scraper:scrape"
 end
