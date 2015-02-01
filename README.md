@@ -1,4 +1,4 @@
-# Bürger Büro Warteizeiten API
+# Bürger Büro Wartezeiten API
 
 Die Stadt Münster hat eine eigene Seite/Snippet für die Wartezeiten im
 Bürgerbüro Mitte: http://muenster.de/stadt/buergeramt/mobil-wartezeit.shtml
