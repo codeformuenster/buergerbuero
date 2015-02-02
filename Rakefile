@@ -1,4 +1,5 @@
-require './lib/scraper'
+require './lib/buerger_buero'
+
 task default: %w[scraper:scrape]
 namespace :scraper do
   desc "Scraping"

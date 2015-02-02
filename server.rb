@@ -2,7 +2,7 @@ require 'sinatra/base'
 require "sinatra"
 require 'sinatra/cross_origin'
 require 'data_mapper'
-require './lib/waiting_citizen'
+require './lib/buerger_buero/waiting_citizen'
 
 module Buergerbuero
   class App < Sinatra::Base
