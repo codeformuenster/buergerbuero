@@ -1,4 +1,6 @@
 # Bürger Büro Warteizeiten API
+[![Code
+Climate](https://codeclimate.com/github/codeformuenster/buergerbuero/badges/gpa.svg)](https://codeclimate.com/github/codeformuenster/buergerbuero)
 
 Die Stadt Münster hat eine eigene Seite/Snippet für die Wartezeiten im
 Bürgerbüro Mitte: http://muenster.de/stadt/buergeramt/mobil-wartezeit.shtml
@@ -31,6 +33,7 @@ Das JSON Objekt setzt sich folgendermaßen zusammen
 * Then run: `sudo fig up`
 
 The website is now available at [http://localhost:3338](http://localhost:3338).
+
 
 ## Contributing
 [![Stories in Ready](https://badge.waffle.io/codeformuenster/buergerbuero.png?label=ready&title=Ready)](https://waffle.io/codeformuenster/buergerbuero)
