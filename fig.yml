@@ -2,7 +2,7 @@ api:
   build: .
   command: puma -p 80
   ports:
-    - 3338:80
+    - 3338:9292
   volumes:
     - /srv
 cron:

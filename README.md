@@ -1,4 +1,4 @@
-# Bürger Büro Warteizeiten API
+# Bürger Büro Wartezeiten API
 [![Code
 Climate](https://codeclimate.com/github/codeformuenster/buergerbuero/badges/gpa.svg)](https://codeclimate.com/github/codeformuenster/buergerbuero)
 
