@@ -1,3 +1,4 @@
+require './config/config'
 require 'data_mapper'
 require_relative 'waiting_citizen'
 
@@ -5,7 +6,7 @@ module BuergerBuero
   class Scraper
 
     def initialize
-      DataMapper::setup(:default, "sqlite3:///srv/buerberbuero.db")
+      DataMapper::setup(:default, BuergerBueroSettings.database)
       DataMapper.auto_upgrade!
     end
 
