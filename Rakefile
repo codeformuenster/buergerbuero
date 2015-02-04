@@ -1,3 +1,4 @@
+require 'dotenv/tasks'
 require './lib/buerger_buero'
 
 task default: %w[scraper:scrape]
