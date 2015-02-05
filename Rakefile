@@ -8,7 +8,6 @@ namespace :setup do
   task :sqlite do
     File.write('.env', "DATABASE=sqlite://#{Dir.pwd}/buergerbuero.db")
   end
-
 end
 
 namespace :scraper do
