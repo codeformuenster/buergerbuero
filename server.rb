@@ -11,7 +11,7 @@ module Buergerbuero
       content_type :json
     end
 
-    DataMapper::setup(:default, BuergerBueroSettings.database)
+    DataMapper::setup(:default, ENV["DATABASE"])
     DataMapper.auto_upgrade!
 
     get "/latest" do

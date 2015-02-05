@@ -3,7 +3,7 @@ api:
   command: puma
   environment:
      - RACK_ENV=production
-     - DATABASE=/srv/buergerbuero.db
+     - DATABASE=sqlite:///srv/buergerbuero.db
   ports:
     - 3338:9292
   volumes:
@@ -13,7 +13,7 @@ cron:
   command: "go-cron '@every 1m' /bin/sh -c 'bundle exec rake scraper:scrape --silent'"
   environment:
      - RACK_ENV=production
-     - DATABASE=/srv/buergerbuero.db
+     - DATABASE=sqlite:///srv/buergerbuero.db
   volumes_from:
     - api
 

@@ -6,7 +6,7 @@ module BuergerBuero
   class Scraper
 
     def initialize
-      DataMapper::setup(:default, BuergerBueroSettings.database)
+      DataMapper::setup(:default, ENV["DATABASE"])
       DataMapper.auto_upgrade!
     end
 
