@@ -133,6 +133,7 @@ DEPENDENCIES
   chronic_duration
   data_mapper
   dm-sqlite-adapter
+  dotenv
   foreman
   puma
   rake

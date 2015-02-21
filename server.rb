@@ -3,6 +3,7 @@ require "sinatra"
 require 'sinatra/cross_origin'
 require 'data_mapper'
 require './lib/buerger_buero/waiting_citizen'
+require './config/config'
 
 module Buergerbuero
   class App < Sinatra::Base
@@ -10,7 +11,7 @@ module Buergerbuero
       content_type :json
     end
 
-    DataMapper::setup(:default, "sqlite3:///srv/buerberbuero.db")
+    DataMapper::setup(:default, ENV["DATABASE"])
     DataMapper.auto_upgrade!
 
     get "/latest" do
