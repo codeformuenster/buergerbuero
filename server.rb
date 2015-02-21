@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require "sinatra"
-require 'sinatra/cross_origin'
 require 'data_mapper'
 require './lib/buerger_buero/waiting_citizen'
 require './config/config'
@@ -9,6 +8,8 @@ module Buergerbuero
   class App < Sinatra::Base
     before do
       content_type :json
+      headers 'Access-Control-Allow-Origin' => '*',
+        'Access-Control-Allow-Methods' => ['OPTIONS', 'GET']
     end
 
     DataMapper::setup(:default, ENV["DATABASE"])
