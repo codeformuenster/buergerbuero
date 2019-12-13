@@ -7,7 +7,7 @@ gem 'dm-sqlite-adapter'
 gem 'data_mapper'
 gem 'whenever'
 gem 'foreman'
-gem 'puma'
+gem 'puma', '>= 3.12.2'
 gem 'dotenv'
 
 gem 'sinatra', require: false
