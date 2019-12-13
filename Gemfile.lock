@@ -89,13 +89,15 @@ GEM
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
+    nio4r (2.5.2)
     nokogiri (1.6.8.rc3)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     ntlm-http (0.1.1)
     numerizer (0.1.1)
     pkg-config (1.1.7)
-    puma (3.1.0)
+    puma (4.3.1)
+      nio4r (~> 2.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -137,7 +139,7 @@ DEPENDENCIES
   dotenv
   foreman
   nokogiri (~> 1.6, >= 1.6.8.rc3)
-  puma
+  puma (>= 3.12.2)
   rake
   sinatra
   sinatra-cross_origin (~> 0.3.2)
@@ -145,4 +147,4 @@ DEPENDENCIES
   wombat
 
 BUNDLED WITH
-   1.11.2
+   1.17.3
