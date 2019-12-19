@@ -96,7 +96,7 @@ GEM
     numerizer (0.1.1)
     pkg-config (1.1.7)
     puma (3.1.0)
-    rack (1.6.4)
+    rack (1.6.12)
     rack-protection (1.5.3)
       rack
     rake (11.0.1)
