@@ -83,18 +83,16 @@ GEM
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
     mime-types (2.99.1)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.4.0)
     minitest (5.8.4)
     multi_json (1.11.2)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     netrc (0.11.0)
-    nokogiri (1.6.8.rc3)
-      mini_portile2 (~> 2.1.0)
-      pkg-config (~> 1.1.7)
+    nokogiri (1.10.8)
+      mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
     numerizer (0.1.1)
-    pkg-config (1.1.7)
     puma (3.1.0)
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -136,7 +134,7 @@ DEPENDENCIES
   dm-sqlite-adapter
   dotenv
   foreman
-  nokogiri (~> 1.6, >= 1.6.8.rc3)
+  nokogiri (~> 1.10)
   puma
   rake
   sinatra
