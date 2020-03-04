@@ -95,7 +95,7 @@ GEM
     ntlm-http (0.1.1)
     numerizer (0.1.1)
     pkg-config (1.1.7)
-    puma (3.1.0)
+    puma (3.12.4)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
