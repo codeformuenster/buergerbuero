@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem 'rake'
-gem 'nokogiri', '~> 1.6', '>= 1.6.8.rc3'
+gem 'nokogiri', '~> 1.11'
 gem 'wombat'
 gem 'dm-sqlite-adapter'
 gem 'data_mapper'
